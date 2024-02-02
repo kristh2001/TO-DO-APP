@@ -1,0 +1,23 @@
+<!-- views/editTask.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Task</h1>
+    <form action="/updateTask" method="post">
+      <input type="hidden" name="id" value="<%= task.id %>">
+      <label for="task">Task:</label>
+      <input type="text" id="task" name="task" value="<%= task.task %>" required><br>
+
+      <input type="submit" value="Update Task">
+    </form>
+  </div>
+</body>
+</html>
